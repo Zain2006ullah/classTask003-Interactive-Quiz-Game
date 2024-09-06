@@ -1,4 +1,4 @@
-/* * {
+{
     padding: 0%;
     margin: 0%;
   }
@@ -40,7 +40,7 @@
     transition: background-color 0.3s;
   }
   
-  .answer-btn:hover {
+  /* .answer-btn:hover {
     background-color: #0056b3;
   }
   
@@ -56,4 +56,4 @@
   #result-message {
     margin-top: 20px;
     font-weight: bold;
-  } */
+  }  */
