@@ -157,3 +157,14 @@ function resetGame() {
         nextButton.style.display = 'none';
     });
 }
+
+
+document.addEventListener('keydown', (event) => {
+    var key = event.key;
+    if (key >= 1 && key <= 4) {
+        var selectedIndex = key - 1;
+        handleAnswer(selectedIndex);
+    }
+});
+
+loadQuestion();
