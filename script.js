@@ -78,4 +78,12 @@ var questions = [
 ];
 
 
+var currentQuestionIndex = 0;
+var score = 0;
+
+var questionArea = document.getElementById('question-area');
+var answerButtons = document.querySelectorAll('.answer-btn');
+var scoreDisplay = document.getElementById('score');
+var nextButton = document.getElementById('next-btn');
+var resultMessage = document.getElementById('result-message');
  
