@@ -142,3 +142,18 @@ nextButton.addEventListener('click', () => {
         resetGame();
     }
 });
+
+
+// Added game reset and replay feature 🔄
+
+function resetGame() {
+    currentQuestionIndex = 0;
+    score = 0;
+    scoreDisplay.innerText = `Score: ${score}`;
+    nextButton.innerText = "Play Again";
+    nextButton.style.display = 'block';
+    nextButton.addEventListener('click', () => {
+        loadQuestion();
+        nextButton.style.display = 'none';
+    });
+}
