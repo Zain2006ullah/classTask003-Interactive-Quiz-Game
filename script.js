@@ -128,3 +128,17 @@ answerButtons.forEach(button => {
         handleAnswer(selectedIndex);
     });
 });
+
+
+// Handled keyboard input for quick answers ⌨️
+
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        loadQuestion();
+    } else {
+        resultMessage.innerText = `Game Over! Your score is ${score}/${questions.length}.`;
+        nextButton.style.display = 'none';
+        resetGame();
+    }
+});
