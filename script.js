@@ -99,3 +99,32 @@ function loadQuestion() {
     resultMessage.innerText = '';
     nextButton.style.display = 'none';
 }
+
+
+// Created "Next Question" button functionality ⏭️
+
+function handleAnswer(selectedIndex) {
+    var currentQuestion = questions[currentQuestionIndex];
+    if (selectedIndex === currentQuestion.answer) {
+        score++;
+        alert(resultMessage.innerText = "Correct!");
+    } else {
+        resultMessage.innerText = "Try Again!";
+    }
+    scoreDisplay.innerText = `Score: ${score}`;
+    answerButtons.forEach((button, index) => {
+        if (index === currentQuestion.answer) {
+            button.classList.add('correct');
+        } else {
+            button.classList.add('wrong');
+        }
+    });
+    nextButton.style.display = 'block';
+}
+
+answerButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        var selectedIndex = parseInt(button.getAttribute('data-index'));
+        handleAnswer(selectedIndex);
+    });
+});
