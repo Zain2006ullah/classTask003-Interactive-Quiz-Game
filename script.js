@@ -87,3 +87,15 @@ var scoreDisplay = document.getElementById('score');
 var nextButton = document.getElementById('next-btn');
 var resultMessage = document.getElementById('result-message');
  
+// Implemented answer checking and scoring ✅
+
+function loadQuestion() {
+    var currentQuestion = questions[currentQuestionIndex];
+    questionArea.innerText = currentQuestion.question;
+    answerButtons.forEach((button, index) => {
+        button.innerText = currentQuestion.choices[index];
+        button.classList.remove('correct', 'wrong');
+    });
+    resultMessage.innerText = '';
+    nextButton.style.display = 'none';
+}
